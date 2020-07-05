@@ -1,0 +1,2 @@
+flag: MAZ3{Y0U_4R3_GR33P1NG_1T_OX21}
+
