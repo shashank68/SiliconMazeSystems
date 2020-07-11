@@ -1,0 +1,14 @@
+version: "3.8"
+services: 
+    pyts:
+        build: .
+        # volumes:
+            # - ./files:/app
+        restart: always
+        ports:
+            - 3333:3000
+        tty: true
+networks: 
+    no-internet:
+        driver: bridge
+        internal: true
