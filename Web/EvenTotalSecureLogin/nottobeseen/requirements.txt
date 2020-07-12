@@ -1,0 +1,5 @@
+Flask==1.1.2
+gunicorn==20.0.4
+cryptography==0.7.2
+PyJWT==0.4.3
+Flask-WTF==0.14.3

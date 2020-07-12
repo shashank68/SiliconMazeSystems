@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    app:
+        build: .
+        env_file: '.env.web'
+        restart: always
+        ports:
+            - 555:8000
+        volumes: 
+            - .:/app
+        command: bash -c "gunicorn --bind 0.0.0.0:8000 wsgi:app"
