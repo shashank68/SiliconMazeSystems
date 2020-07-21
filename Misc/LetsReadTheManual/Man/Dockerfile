@@ -23,7 +23,7 @@ RUN mkdir /home/ctfroot/bin && mkdir -p /home/ctfroot/usr/bin && \
 RUN mkdir -p /home/ctfroot/home/mazerunner
 RUN useradd -d /home/mazerunner mazerunner
 
-RUN echo "mazerunner:please" | chpasswd
+RUN echo "mazerunner:pleasereadtheManual123" | chpasswd
 RUN echo "alias sh='echo We dont do that here'" > /home/ctfroot/home/mazerunner/.profile
 RUN echo "less manner; exit" >> /home/ctfroot/home/mazerunner/.profile
 COPY ./sshd_config /etc/ssh/sshd_config
