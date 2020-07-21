@@ -1,8 +1,8 @@
 version: "3.8"
 services: 
-    mans:
+    less:
         build: .       
         restart: always
         ports:
-            - "444:22"
+            - "666:22"
         tty: true
