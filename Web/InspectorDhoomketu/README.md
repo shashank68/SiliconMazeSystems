@@ -1,4 +1,4 @@
 flag: MAZ3{1n5p3ct0r_E*p0s3s_51te5}
 
-ChallengeSite: https://nottobeseen.herokuapp.com/
+ChallengeSite: https://nottobeseen.herokuapp.com/detective
 

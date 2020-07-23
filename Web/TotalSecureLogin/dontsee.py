@@ -4,11 +4,6 @@ import os
 import hashlib
 from flask import Flask, render_template, make_response, request, redirect
 from flask_wtf.csrf import CSRFProtect
-# from jwt.contrib.algorithms.pycrypto import RSAAlgorithm
-
-
-# jwt.unregister_algorithm('RS256')
-# jwt.register_algorithm('RS256', RSAAlgorithm(RSAAlgorithm.SHA256))
 
 
 app = Flask(__name__)
@@ -58,17 +53,18 @@ def logout():
 	resp.delete_cookie("auth")
 	return resp
 
+@app.route('/detective', methods=['GET'])
+def detective():
+	resp = make_response(render_template("detective.html"))
+	return resp
+
 @app.route("/key")
 def public_key():
 	with open("./ab", "r") as f:
-		resp = make_response(f.read())
-		resp.mimetype = 'text/plain'
-		return resp
-
-@app.route("/supersecret")
-def secret():
-	with open("./secret", "r") as f:
-		resp = make_response(f.read())
+		art = open('./ascii.txt', 'r')
+		resp = make_response(art.read() + '\n' + f.read())
+		art.close()
+		print(resp)
 		resp.mimetype = 'text/plain'
 		return resp
 
