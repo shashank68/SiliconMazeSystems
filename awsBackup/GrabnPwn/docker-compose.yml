@@ -1,0 +1,7 @@
+version: "3.8"
+services: 
+    grabnpwn:
+        build: .       
+        restart: always
+        ports:
+            - "555:2000"
